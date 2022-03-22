@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce((total, price) => total + price, 0)
-console.log(summedPrice)
+const summedPrice = cart.reduce((acc, curr) => console.log(curr), 0)
+
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -53,8 +53,11 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let finalPrice = cartTotal + (cartTotal * tax) - couponValue
+   
+}
+console.log(calcFinalPrice(15, 3, .05))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +82,10 @@ console.log(summedPrice)
 /*
     TEXT ANSWER HERE
 
-*/
+//  moneyToSpend - Number: Got to make sure that the customer has options that fit their budget
+// wantsDrink - Boolean: Seeing if customer would like a drink
+// allergies - Boolean: Pretty self explanatory, want to make sure our customer doesn't die
+// vegetarian - Boolean: As much as we joke about vegetarians telling everyone they're vegetarian, should still make sure if the customer is vegetarian or not
 
 /*
     Now, create a customer object following your own
@@ -87,3 +93,10 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+const customer = {
+    moneyToSpend: 30,
+    wantsDrink: true,
+    alergies: false,
+    vegetarian: false
+}
+console.log(customer)
